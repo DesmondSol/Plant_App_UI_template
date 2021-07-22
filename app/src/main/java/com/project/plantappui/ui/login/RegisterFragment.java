@@ -49,7 +49,9 @@ public class RegisterFragment extends Fragment {
 
         final EditText usernameEditText = binding.username;
         final EditText passwordEditText = binding.password;
-        final Button loginButton = binding.login;
+        final EditText emailEditText = binding.gmail;
+        final EditText phoneEditText = binding.phone;
+        final Button loginButton = binding.reg;
         final ProgressBar loadingProgressBar = binding.loading;
 
         loginViewModel.getLoginFormState().observe(getViewLifecycleOwner(), new Observer<LoginFormState>() {
