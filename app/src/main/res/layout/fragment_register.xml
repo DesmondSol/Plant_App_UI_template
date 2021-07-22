@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
     android:paddingBottom="@dimen/fragment_vertical_margin"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.login.RegisterFragment">
 
 
     <RelativeLayout
@@ -94,7 +94,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="@color/light_gray" />
 
-
+            <!--password-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
@@ -135,15 +135,102 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@color/light_gray" />
+            <!--email-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_gmail"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@android:drawable/ic_dialog_email"
+                    app:tint="#EB157819" /><!--   android:foreground="@android:drawable/ic_dialog_email"-->
+
+                <EditText
+                    android:id="@+id/gmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@null"
+                    android:fontFamily="@font/nunito_semi_bold"
+                    android:gravity="center"
+
+                    android:hint="@string/prompt_email1"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_late_gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/light_gray" />
+            <!--phone no-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_phone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+
+                    android:foregroundTint="#126014"
+                    android:src="@android:drawable/ic_menu_call"
+                    app:tint="#226724" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@null"
+                    android:fontFamily="@font/nunito_semi_bold"
+                    android:gravity="center"
+
+                    android:hint="@string/prompt_phone"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_late_gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/light_gray" />
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/reg"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@android:color/transparent"
-                android:text="Sign In"
+                android:text="Register"
                 android:textAllCaps="false"
                 android:textColor="@color/teal"
                 android:textSize="17sp"
