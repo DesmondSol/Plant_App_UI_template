@@ -93,7 +93,7 @@
                             android:layout_marginStart="15dp"
                             android:fontFamily="@font/nunito_semi_bold"
                             android:gravity="center_vertical"
-                            android:text="achmadprogrammer@gmail.com" />
+                            android:text="programmer@gmail.com" />
                     </LinearLayout>
 
                     <View
@@ -153,7 +153,7 @@
                             android:layout_marginStart="15dp"
                             android:fontFamily="@font/nunito_semi_bold"
                             android:gravity="center_vertical"
-                            android:text="+6289 7598 3459" />
+                            android:text="+25198 3459324" />
                     </LinearLayout>
 
                     <View
