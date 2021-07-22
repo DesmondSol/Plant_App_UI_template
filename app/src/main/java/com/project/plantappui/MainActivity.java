@@ -19,6 +19,8 @@ import com.google.android.material.navigation.NavigationView;
 import com.project.plantappui.menu.favorite.FavoriteFragment;
 import com.project.plantappui.menu.home.HomeFragment;
 import com.project.plantappui.menu.profile.ProfileFragment;
+import com.project.plantappui.ui.login.LoginFragment;
+import com.project.plantappui.ui.login.RegisterFragment;
 
 import java.util.Objects;
 
@@ -104,12 +106,34 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.nav_weeds:
                         Pesan("Menu Weeds");
+
+
+                        fragment = new LoginFragment();
+
+                        if (fragment != null) {
+                            fragmentManager = getSupportFragmentManager();
+                            fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment)
+                                    .commit();
+                        } else {
+                            Log.e(TAG, "Error in creating Fragment");
+                        }
                         break;
                     case R.id.nav_insects:
                         Pesan("Menu Insects");
+
+                        fragment = new RegisterFragment();
+
+                        if (fragment != null) {
+                            fragmentManager = getSupportFragmentManager();
+                            fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment)
+                                    .commit();
+                        } else {
+                            Log.e(TAG, "Error in creating Fragment");
+                        }
                         break;
                     case R.id.nav_diseases:
                         Pesan("Menu Diseases");
