@@ -10,267 +10,265 @@
     tools:context=".ui.login.RegisterFragment">
 
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="410dp"
-                android:layout_height="129dp"
-                android:background="@drawable/half_rounded"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView3"
-                android:layout_width="118dp"
-                android:layout_height="118dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="84dp"
-                android:elevation="3dp"
-                android:src="@drawable/ic_avatar"
-                app:civ_border_color="@android:color/white"
-                app:civ_border_width="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
-
-            <LinearLayout
-        android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/bg_search"
-        android:elevation="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <LinearLayout
-            android:id="@+id/holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="70sp"
-            android:background="@drawable/bg_search"
-            android:elevation="50dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView3"
-            android:orientation="vertical">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <RelativeLayout
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="410dp"
+            android:layout_height="129dp"
+            android:background="@drawable/half_rounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView3"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84dp"
+            android:elevation="3dp"
+            android:src="@drawable/ic_avatar"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp">
 
-                <ImageView
-                    android:id="@+id/iv_pass"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_profile"
-                    app:tint="#377539" />
-
-                <EditText
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:background="@null"
-                    android:fontFamily="@font/nunito_semi_bold"
-                    android:gravity="center"
-
-                    android:hint="@string/prompt_email"
-                    android:singleLine="true"
-                    android:textColor="@color/dark_late_gray"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/light_gray" />
-
-            <!--password-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/iv_lock"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_password" />
-
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:background="@null"
-                    android:fontFamily="@font/nunito_semi_bold"
-                    android:gravity="center"
-                    android:hint="••••••••••"
-                    android:inputType="textPassword"
-                    android:singleLine="true"
-                    android:textColor="@color/dark_late_gray"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/light_gray" />
-            <!--email-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/iv_gmail"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@android:drawable/ic_dialog_email"
-                    app:tint="#EB157819" /><!--   android:foreground="@android:drawable/ic_dialog_email"-->
-
-                <EditText
-                    android:id="@+id/gmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:background="@null"
-                    android:fontFamily="@font/nunito_semi_bold"
-                    android:gravity="center"
-
-                    android:hint="@string/prompt_email1"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:textColor="@color/dark_late_gray"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/light_gray" />
-            <!--phone no-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/iv_phone"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-
-                    android:foregroundTint="#126014"
-                    android:src="@android:drawable/ic_menu_call"
-                    app:tint="#226724" />
-
-                <EditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:background="@null"
-                    android:fontFamily="@font/nunito_semi_bold"
-                    android:gravity="center"
-
-                    android:hint="@string/prompt_phone"
-                    android:inputType="phone"
-                    android:singleLine="true"
-                    android:textColor="@color/dark_late_gray"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/light_gray" />
-
-            <Button
-                android:id="@+id/reg"
-
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@android:color/transparent"
-                android:text="Register"
-                android:textAllCaps="false"
-                android:textColor="@color/teal"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:paddingBottom="20sp"/>
+                android:layout_marginTop="240dp"
+                android:background="@drawable/bg_search"
+                android:elevation="50dp">
 
-            <ProgressBar
-                android:id="@+id/loading"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="050sp"
+                    android:background="@drawable/bg_search"
+                    android:elevation="50dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView3">
 
-        </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
 
-    </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                        <ImageView
+                            android:id="@+id/iv_pass"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#0c9869" />
+
+                        <EditText
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@null"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="center"
+
+                            android:hint="@string/prompt_email"
+                            android:singleLine="true"
+                            android:textColor="@color/dark_late_gray"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_gray" />
+
+                    <!--password-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_lock"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_password" />
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@null"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="center"
+                            android:hint="••••••••••"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/dark_late_gray"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_gray" />
+                    <!--email-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_gmail"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:src="@android:drawable/ic_dialog_email"
+                            app:tint="#0c9869" /><!--   android:foreground="@android:drawable/ic_dialog_email"-->
+
+                        <EditText
+                            android:id="@+id/gmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@null"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="center"
+
+                            android:hint="@string/prompt_email1"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/dark_late_gray"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_gray" />
+                    <!--phone no-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_phone"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+
+
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#0c9869" />
+
+                        <EditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@null"
+                            android:fontFamily="@font/nunito_semi_bold"
+                            android:gravity="center"
+
+                            android:hint="@string/prompt_phone"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:textColor="@color/dark_late_gray"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_gray" />
+
+                    <Button
+                        android:id="@+id/reg"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@android:color/transparent"
+                        android:paddingBottom="20sp"
+                        android:text="Register"
+                        android:textAllCaps="false"
+                        android:textColor="@color/teal"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/loading"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

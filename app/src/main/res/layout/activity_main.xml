@@ -27,8 +27,8 @@
 
         <nl.joery.animatedbottombar.AnimatedBottomBar
             android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="417dp"
+            android:layout_height="13dp"
             android:background="@drawable/bg_half_rounded"
             android:elevation="5dp"
             app:abb_animationDuration="500"
