@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
+import com.project.plantappui.buyablePmodel.buyable_plant_list;
 import com.project.plantappui.menu.favorite.FavoriteFragment;
 import com.project.plantappui.menu.home.HomeFragment;
 import com.project.plantappui.menu.profile.ProfileFragment;
@@ -137,6 +138,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_diseases:
                         Pesan("Menu Diseases");
+                        fragment = new buyable_plant_list();
+
+                        if (fragment != null) {
+                            fragmentManager = getSupportFragmentManager();
+                            fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment)
+                                    .commit();
+                        } else {
+                            Log.e(TAG, "Error in creating Fragment");
+                        }
                         break;
                     case R.id.nav_products:
                         Pesan("Menu Products");

@@ -1,24 +1,17 @@
 package com.project.plantappui.menu.home;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.project.plantappui.R;
 import com.project.plantappui.adapter.HomeDetailAdapter;
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import java.util.ArrayList;
