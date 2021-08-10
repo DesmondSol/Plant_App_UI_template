@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/ic_plant"
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantAppUI.NoActionBar">
-        <activity android:name=".sell_Waste_for_recycling"></activity>
+        <activity android:name=".About_us"></activity>
+        <activity android:name=".sell_Waste_for_recycling" />
         <activity android:name=".model.check_out" />
         <activity
             android:name=".ui.login.RegisterActivity"
